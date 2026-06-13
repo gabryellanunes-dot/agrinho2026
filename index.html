@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROFORTE • Futuro Verde</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), 
+                            url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.1;
+        }
+
+        .animal-float {
+            animation: float 7s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+
+        h1, h2, h3 {
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body class="bg-emerald-950 text-emerald-100 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full bg-emerald-950/95 backdrop-blur-lg z-50 border-b border-emerald-900">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-seedling text-4xl text-emerald-400"></i>
+                <span class="text-3xl font-bold tracking-tighter">AGROFORTE</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-lg">
+                <a href="#praticas" class="hover:text-emerald-400 transition-colors">Práticas</a>
+                <a href="#animais" class="hover:text-emerald-400 transition-colors">Animais</a>
+                <a href="#inovacao" class="hover:text-emerald-400 transition-colors">Inovação</a>
+                <a href="#galeria" class="hover:text-emerald-400 transition-colors">Galeria</a>
+            </div>
+            <button onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})" 
+                    class="bg-emerald-600 hover:bg-emerald-500 px-8 py-3 rounded-full font-medium flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-leaf"></i>
+                <span>Junte-se ao Futuro</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-6 text-center z-10">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full mb-8 border border-white/20">
+                <span class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></span>
+                <span class="uppercase tracking-widest text-sm font-medium">Equilíbrio • Produção • Natureza</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold section-title leading-none mb-6">
+                AGRO FORTE,<br>
+                <span class="text-emerald-400">FUTURO VERDE</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-xl md:text-2xl text-emerald-100/90 mb-10 px-4">
+                Onde a força da produção encontra a sabedoria da natureza
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <button onclick="document.getElementById('praticas').scrollIntoView({behavior: 'smooth'})" 
+                        class="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-6 rounded-2xl text-xl font-semibold flex items-center gap-3 mx-auto sm:mx-0 transition-all">
+                    EXPLORAR PRÁTICAS
+                    <i class="fa-solid fa-arrow-down"></i>
+                </button>
+                
+                <button onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'})" 
+                        class="border-2 border-white/70 hover:border-white text-white px-10 py-6 rounded-2xl text-xl font-medium flex items-center gap-3 mx-auto sm:mx-0 transition-all">
+                    VER O FUTURO →
+                </button>
+            </div>
+        </div>
+
+        <!-- Animais flutuantes -->
+        <div class="absolute bottom-20 left-10 hidden lg:block text-6xl animal-float">🐄</div>
+        <div class="absolute bottom-40 right-16 hidden lg:block text-6xl animal-float" style="animation-delay: 2.3s;">🌾</div>
+        <div class="absolute top-32 left-1/4 hidden xl:block text-6xl animal-float" style="animation-delay: 1s;">🐔</div>
+        <div class="absolute top-52 right-1/3 hidden xl:block text-7xl animal-float" style="animation-delay: 3.5s;">🌱</div>
+    </section>
+
+    <!-- Outras seções (melhoradas) -->
+    <section class="py-24 bg-emerald-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block px-4 py-2 bg-emerald-800 text-emerald-300 rounded-full text-sm mb-6">MISSÃO 2035</span>
+                    <h2 class="section-title text-5xl md:text-6xl leading-tight mb-8">
+                        Produzir com força.<br>Preservar com amor.
+                    </h2>
+                    <p class="text-xl text-emerald-100/80 leading-relaxed">
+                        A AGROFORTE representa o novo paradigma da agricultura: 
+                        tecnologia de ponta aliada à regeneração ambiental.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="https://picsum.photos/id/1016/800/900" 
+                         class="rounded-3xl shadow-2xl w-full" alt="Fazenda sustentável">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Práticas -->
+    <section id="praticas" class="py-24 bg-emerald-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="section-title text-5xl md:text-6xl text-center mb-16">Práticas que Transformam</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-emerald-900/70 border border-emerald-700 rounded-3xl p-8 card-hover group">
+                    <img src="https://picsum.photos/id/201/600/400" class="w-full h-52 object-cover rounded-2xl mb-6 group-hover:scale-105 transition" alt="">
+                    <h3 class="text-3xl font-bold mb-3">Agricultura de Precisão</h3>
+                    <p class="text-emerald-100/70">Drones, sensores e IA para usar menos recursos e produzir mais.</p>
+                </div>
+
+                <div class="bg-emerald-900/70 border border-emerald-700 rounded-3xl p-8 card-hover group">
+                    <img src="https://picsum.photos/id/251/600/400" class="w-full h-52 object-cover rounded-2xl mb-6 group-hover:scale-105 transition" alt="">
+                    <h3 class="text-3xl font-bold mb-3">Sistemas Agroflorestais</h3>
+                    <p class="text-emerald-100/70">Integração de árvores, cultivos e animais para regenerar o solo.</p>
+                </div>
+
+                <div class="bg-emerald-900/70 border border-emerald-700 rounded-3xl p-8 card-hover group">
+                    <img src="https://picsum.photos/id/866/600/400" class="w-full h-52 object-cover rounded-2xl mb-6 group-hover:scale-105 transition" alt="">
+                    <h3 class="text-3xl font-bold mb-3">Energia Renovável</h3>
+                    <p class="text-emerald-100/70">Painéis solares e biodigestores para fazendas autossuficientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <section id="contato" class="py-32 bg-gradient-to-br from-emerald-800 to-emerald-950 text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="section-title text-5xl md:text-6xl mb-8">Pronto para construir o futuro?</h2>
+            <button onclick="alert('Obrigado! Em breve entraremos em contato 🌱')" 
+                    class="bg-white text-emerald-950 px-12 py-6 rounded-3xl text-2xl font-semibold hover:bg-emerald-100 transition">
+                Falar com Especialista
+            </button>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
